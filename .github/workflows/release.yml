@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: "actions/checkout@v4"
+
+      - name: "Build pack"
+        run: |
+          cd src
+          zip -r ../${{ github.event.repository.name }}-${{ github.ref_name }}-mc$(cat ../MC_VERSION).zip *
+
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: false
+          files: "*.zip"
