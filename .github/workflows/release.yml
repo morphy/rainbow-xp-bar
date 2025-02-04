@@ -15,5 +15,19 @@ jobs:
         uses: K-Phoen/semver-release-action@master
         with:
           release_branch: main
+          release_strategy: tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - uses: "actions/checkout@v4"
+
+      - name: "Build pack"
+        run: |
+          cd src
+          zip ../${{ github.event.repository.name }}-${{ github.ref_name }}.zip *
+
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: false
+          files: ${{ github.event.repository.name }}-${{ github.ref_name }}.zip
