@@ -1,24 +1,17 @@
 name: Release
 
 on:
-  pull_request:
-    types: [closed]
+  push:
+    tags:
+      - v*
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
-    if: github.event.pull_request.merged
-    
+    if: github.event.base_ref == 'refs/heads/main'
+
     steps:
-      - name: Bump version and release
-        uses: K-Phoen/semver-release-action@master
-        with:
-          release_branch: main
-          release_strategy: tag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
       - uses: "actions/checkout@v4"
 
       - name: "Build pack"
