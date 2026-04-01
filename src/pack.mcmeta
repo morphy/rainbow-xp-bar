@@ -1,10 +1,49 @@
 {
   "pack": {
     "pack_format": 18,
+    "min_format": 18,
+    "max_format": 84,
     "supported_formats": {
       "min_inclusive": 18,
-      "max_inclusive": 50
+      "max_inclusive": 84
     },
-    "description": "\u00A7cMakes \u00A76your \u00A7exp \u00A7abar \u00A7deccentric \u00A7f(\u00A7bfreaky\u00A7f)"
+    "description": [
+      { "text": "M", "color": "#EC4031" },
+      { "text": "a", "color": "#EC6831" },
+      { "text": "k", "color": "#EC9131" },
+      { "text": "e", "color": "#ECB931" },
+      { "text": "s", "color": "#ECE131" },
+      { "text": " " },
+      { "text": "y", "color": "#ABE531" },
+      { "text": "o", "color": "#8AE831" },
+      { "text": "u", "color": "#6AEA31" },
+      { "text": "r", "color": "#49EC31" },
+      { "text": " " },
+      { "text": "x", "color": "#46F296" },
+      { "text": "p", "color": "#45F5C8" },
+      { "text": " " },
+      { "text": "b", "color": "#3CCEF9" },
+      { "text": "a", "color": "#36A4F8" },
+      { "text": "r", "color": "#2F79F7" },
+      { "text": " " },
+      { "text": "e", "color": "#4F49F4" },
+      { "text": "c", "color": "#7643F1" },
+      { "text": "c", "color": "#9E3DEF" },
+      { "text": "e", "color": "#C537EC" },
+      { "text": "n", "color": "#EC31EA" },
+      { "text": "t", "color": "#EC35BC" },
+      { "text": "r", "color": "#EC398E" },
+      { "text": "i", "color": "#EC3C5F" },
+      { "text": "c", "color": "#EC4031" },
+      { "text": "\n" },
+      { "text": "(", "color": "#EC4031" },
+      { "text": "f", "color": "#ECE131" },
+      { "text": "r", "color": "#49EC31" },
+      { "text": "e", "color": "#3DEB8F" },
+      { "text": "a", "color": "#31EAEC" },
+      { "text": "k", "color": "#284FF6" },
+      { "text": "y", "color": "#EC31EA" },
+      { "text": ")", "color": "#D62327" }
+    ]
   }
 }
